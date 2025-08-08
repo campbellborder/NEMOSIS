@@ -1,3 +1,5 @@
+import os
+
 names = {
     "FCAS Providers": "NEM Registration and Exemption List.xls",
     "DISPATCHLOAD": "PUBLIC_DVD_DISPATCHLOAD",
@@ -56,9 +58,9 @@ table_types = {
     "SPDCONNECTIONPOINTCONSTRAINT": "MMS",
     "SPDINTERCONNECTORCONSTRAINT": "MMS",
     "GENERICCONSTRAINTRHS": "MMS",
-    "BIDPEROFFER_D": "BIDDING",
+    "BIDPEROFFER_D": "MMS",
     "DISPATCHINTERCONNECTORRES": "MMS",
-    "BIDDAYOFFER_D": "BIDDING",
+    "BIDDAYOFFER_D": "MMS",
     "DISPATCHREGIONSUM": "MMS",
     "FCAS_4_SECOND": "FCAS",
     "ELEMENTS_FCAS_4_SECOND": "STATIC",
@@ -941,4 +943,4 @@ last_column = 100
 join_type = ["inner", "left", "right"]
 
 # Testing settings
-raw_data_cache = "/media/nick/Samsung_T5/nemosis_test_cache"
+raw_data_cache = os.environ.get("NEMOSIS_TEST_CACHE")
